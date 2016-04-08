@@ -4,6 +4,7 @@
 # Main configuration
 httpd_ServerRoot: '/etc/httpd'
 httpd_Listen: 80
+httpd_ServerName: "{{ ansible_default_ipv4.address }}"
 httpd_ServerAdmin: root@localhost
 httpd_ServerTokens: Prod
 httpd_DocumentRoot: '/var/www/html'
