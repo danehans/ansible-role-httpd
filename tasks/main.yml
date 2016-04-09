@@ -49,6 +49,13 @@
   notify: restart httpd
   tags: httpd
 
+- name: Determine if firewalld installed
+  command: "rpm -q firewalld"
+  register: s
+  changed_when: false
+  failed_when: false
+  always_run: yes
+
 - name: Set the has_firewalld fact
   set_fact:
     has_firewalld: true
